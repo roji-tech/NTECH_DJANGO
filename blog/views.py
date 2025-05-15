@@ -1,4 +1,6 @@
 from django.shortcuts import render
+
+from blog.forms import BlogForm
 from .models import Blog
 from django.contrib.auth import get_user_model
 
@@ -9,7 +11,28 @@ User = get_user_model()
 
 
 def home(request):
-    return render(request, "blog/index.html")
+    form = BlogForm()
+
+    if request.method == "POST":
+        body = request.body
+        print(body)
+        print(request.POST)
+
+        form = BlogForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+
+    if request.method == "GET":
+        ...
+        print(dir(request))
+        print(request.GET)
+        print(request.path)
+
+    context = {
+        "myform": form
+    }
+
+    return render(request, "blog/index.html", context)
 
 
 def create_blog(request):

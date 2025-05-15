@@ -9,18 +9,20 @@
     <header>
       <h1>Welcome to the Blog</h1>
       <nav>
-        <ul>
-
-        </ul>
+        <ul></ul>
       </nav>
     </header>
     <main>
-        {{ blogs }}
+      {{ blogs }} {% for blog in blogs %}
+      <li>{{ blog }} -- {{ blog.content }}</li>
+      {% endfor %}
 
-        {% for blog in blogs %}
-            <li>{{ blog }} -- {{ blog.content }} </li>
-        {% endfor %}
-        
+      <form action="." method="post">
+        {% csrf_token %}
+        {{ myform.as_p }}
+
+        <button type="submit">Create New Blog</button>
+      </form>
     </main>
     <footer>
       <p>&copy; 2023 Blog. All rights reserved.</p>

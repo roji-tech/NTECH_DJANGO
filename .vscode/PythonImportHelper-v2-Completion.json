@@ -430,6 +430,14 @@
         "documentation": {}
     },
     {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
         "label": "about",
         "importPath": "blog.views",
         "description": "blog.views",
@@ -451,6 +459,14 @@
         "description": "blog.views",
         "isExtraImport": true,
         "detail": "blog.views",
+        "documentation": {}
+    },
+    {
+        "label": "BlogForm",
+        "importPath": "blog.forms",
+        "description": "blog.forms",
+        "isExtraImport": true,
+        "detail": "blog.forms",
         "documentation": {}
     },
     {
@@ -731,6 +747,15 @@
         "documentation": {}
     },
     {
+        "label": "BlogForm",
+        "kind": 6,
+        "importPath": "blog.forms",
+        "description": "blog.forms",
+        "peekOfCode": "class BlogForm(forms.ModelForm):\n    class Meta:\n        model = Blog\n        fields = [\n            \"user\",\n            \"title\",\n            \"content\",\n        ]\n        widgets = {\n            \"user\": forms.Select(attrs={\"class\": \"form-control\", \"id\": \"user_idd\"}),",
+        "detail": "blog.forms",
+        "documentation": {}
+    },
+    {
         "label": "Blog",
         "kind": 6,
         "importPath": "blog.models",
@@ -780,7 +805,7 @@
         "kind": 2,
         "importPath": "blog.views",
         "description": "blog.views",
-        "peekOfCode": "def home(request):\n    return render(request, \"blog/index.html\")\ndef create_blog(request):\n    user = User.objects.get(id=1)\n    # print(\"\\n\\n\", \"Result: \", user, user.email, user.username, user.password, \"\\n\\n\")\n    # print(Blog.objects.create(user=user, title=\"New Blog\",\n    #       content=\"this is a new blog\",))\n    blogs = Blog.objects.all()\n    context = {\n        \"blogs\": blogs",
+        "peekOfCode": "def home(request):\n    form = BlogForm()\n    if request.method == \"POST\":\n        body = request.body\n        print(body)\n        print(request.POST)\n        form = BlogForm(data=request.POST)\n        if form.is_valid():\n            form.save()\n    if request.method == \"GET\":",
         "detail": "blog.views",
         "documentation": {}
     },
@@ -807,7 +832,7 @@
         "kind": 5,
         "importPath": "blog.views",
         "description": "blog.views",
-        "peekOfCode": "User = get_user_model()\n# Create your views here.\ndef home(request):\n    return render(request, \"blog/index.html\")\ndef create_blog(request):\n    user = User.objects.get(id=1)\n    # print(\"\\n\\n\", \"Result: \", user, user.email, user.username, user.password, \"\\n\\n\")\n    # print(Blog.objects.create(user=user, title=\"New Blog\",\n    #       content=\"this is a new blog\",))\n    blogs = Blog.objects.all()",
+        "peekOfCode": "User = get_user_model()\n# Create your views here.\ndef home(request):\n    form = BlogForm()\n    if request.method == \"POST\":\n        body = request.body\n        print(body)\n        print(request.POST)\n        form = BlogForm(data=request.POST)\n        if form.is_valid():",
         "detail": "blog.views",
         "documentation": {}
     },
