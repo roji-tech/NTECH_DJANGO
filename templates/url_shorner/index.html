@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Url Shortner</title>
+  </head>
+  <body>
+    <header>
+      <h1>Url Shortner</h1>
+    </header>
+    <main>
+      <form action="{% url 'url_shorner:index' %}" method="post">
+        {% csrf_token %} {{ myform.as_p }}
+        <button type="submit">Shorten URL</button>
+      </form>
+
+      <h2>All Urls</h2>
+      <ul>
+        {% for url in urls %}
+        <li>
+          <a href="{{ url.short_url }}">{{ url.short_url }}</a> - {{ url.url }}
+          <form
+            action="{% url 'url_shorner:delete_url' url.pk %}"
+            method="post"
+          >
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+          </form>
+        </li>
+        {% endfor %}
+      </ul>
+    </main>
+    <footer>
+      <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+      <p>
+        <a href="/about">About Us</a> | <a href="/contact">Contact</a> |
+        <a href="/privacy-policy">Privacy Policy</a>
+      </p>
+    </footer>
+  </body>
+</html>

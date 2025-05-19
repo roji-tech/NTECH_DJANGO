@@ -73,6 +73,14 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -82,6 +90,14 @@
     },
     {
         "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -301,11 +317,11 @@
         "documentation": {}
     },
     {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
         "isExtraImport": true,
-        "detail": "django.apps",
+        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -330,6 +346,30 @@
         "description": "django.apps",
         "isExtraImport": true,
         "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
         "documentation": {}
     },
     {
@@ -406,6 +446,14 @@
     },
     {
         "label": "HttpResponse",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
         "isExtraImport": true,
@@ -515,6 +563,30 @@
         "description": "django.views",
         "isExtraImport": true,
         "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "uuid4",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "importPath": "url_shorner.views",
+        "description": "url_shorner.views",
+        "isExtraImport": true,
+        "detail": "url_shorner.views",
+        "documentation": {}
+    },
+    {
+        "label": "Url",
+        "importPath": "url_shorner.models",
+        "description": "url_shorner.models",
+        "isExtraImport": true,
+        "detail": "url_shorner.models",
         "documentation": {}
     },
     {
@@ -1064,6 +1136,51 @@
         "description": "todo.views",
         "peekOfCode": "def home(request):\n    return render(request, 'home.html')\nclass HomeView(View):\n    ...",
         "detail": "todo.views",
+        "documentation": {}
+    },
+    {
+        "label": "UrlShornerConfig",
+        "kind": 6,
+        "importPath": "url_shorner.apps",
+        "description": "url_shorner.apps",
+        "peekOfCode": "class UrlShornerConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'url_shorner'",
+        "detail": "url_shorner.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Url",
+        "kind": 6,
+        "importPath": "url_shorner.models",
+        "description": "url_shorner.models",
+        "peekOfCode": "class Url(models.Model):\n    url = models.CharField(max_length=200)\n    uid = models.CharField(max_length=5, unique=True,\n                           primary_key=True, default=uuid4, editable=False)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.uid} - {self.url}\"",
+        "detail": "url_shorner.models",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "url_shorner.urls",
+        "description": "url_shorner.urls",
+        "peekOfCode": "app_name = \"url_shorner\"\nurlpatterns = [\n    path('', home, name='index'),\n]",
+        "detail": "url_shorner.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "url_shorner.urls",
+        "description": "url_shorner.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', home, name='index'),\n]",
+        "detail": "url_shorner.urls",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "url_shorner.views",
+        "description": "url_shorner.views",
+        "peekOfCode": "def home(request):\n    all_urls = Url.objects.all()\n    if request.method == \"POST\":\n        url = request.POST.get(\"url\")\n        if url:\n            new_url = Url(url=url)\n            new_url.save()\n            all_urls = Url.objects.all()\n    context = {\n        \"urls\": all_urls,",
+        "detail": "url_shorner.views",
         "documentation": {}
     },
     {

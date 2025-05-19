@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     "todo",
     "blog",
     # "school",
-    "accounts"
+    "accounts",
+    "url_shorner",
 ]
 
 MIDDLEWARE = [
