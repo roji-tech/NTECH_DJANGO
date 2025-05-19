@@ -5,7 +5,7 @@ from uuid import uuid4
 
 
 class Url(models.Model):
-    url = models.CharField(max_length=200)
+    url = models.URLField()
     uid = models.CharField(max_length=5, unique=True,
                            primary_key=True, default=uuid4, editable=False)
     created_at = models.DateTimeField(auto_now_add=True)

@@ -317,6 +317,38 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -453,6 +485,14 @@
         "documentation": {}
     },
     {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -467,6 +507,14 @@
         "importPath": "django.db.models.deletion",
         "description": "django.db.models.deletion",
         "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
         "documentation": {}
     },
     {
@@ -566,11 +614,36 @@
         "documentation": {}
     },
     {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
         "label": "uuid4",
         "importPath": "uuid",
         "description": "uuid",
         "isExtraImport": true,
         "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "Url",
+        "importPath": "url_shorner.models",
+        "description": "url_shorner.models",
+        "isExtraImport": true,
+        "detail": "url_shorner.models",
+        "documentation": {}
+    },
+    {
+        "label": "Url",
+        "importPath": "url_shorner.models",
+        "description": "url_shorner.models",
+        "isExtraImport": true,
+        "detail": "url_shorner.models",
         "documentation": {}
     },
     {
@@ -582,11 +655,19 @@
         "documentation": {}
     },
     {
-        "label": "Url",
-        "importPath": "url_shorner.models",
-        "description": "url_shorner.models",
+        "label": "delete_url",
+        "importPath": "url_shorner.views",
+        "description": "url_shorner.views",
         "isExtraImport": true,
-        "detail": "url_shorner.models",
+        "detail": "url_shorner.views",
+        "documentation": {}
+    },
+    {
+        "label": "UrlShortenerForm",
+        "importPath": "url_shorner.forms",
+        "description": "url_shorner.forms",
+        "isExtraImport": true,
+        "detail": "url_shorner.forms",
         "documentation": {}
     },
     {
@@ -612,7 +693,7 @@
         "kind": 5,
         "importPath": "CONFIG.base_urls",
         "description": "CONFIG.base_urls",
-        "peekOfCode": "urlpatterns = [\n    path('', include('todo.urls')),\n    path('blogs/', include('blog.urls')),\n    path('myadmin/', admin.site.urls),\n] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('', include('todo.urls')),\n    path('blogs/', include('blog.urls')),\n    path(\"shortner/\", include(\"url_shorner.urls\")),\n    path('myadmin/', admin.site.urls),\n] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
         "detail": "CONFIG.base_urls",
         "documentation": {}
     },
@@ -1139,6 +1220,24 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "url_shorner.migrations.0001_initial",
+        "description": "url_shorner.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Url',\n            fields=[\n                ('url', models.CharField(max_length=10000)),\n                ('uid', models.CharField(default=uuid.uuid4, editable=False, max_length=5, primary_key=True, serialize=False, unique=True)),",
+        "detail": "url_shorner.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "url_shorner.migrations.0002_alter_url_url",
+        "description": "url_shorner.migrations.0002_alter_url_url",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('url_shorner', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='url',\n            name='url',\n            field=models.URLField(),\n        ),",
+        "detail": "url_shorner.migrations.0002_alter_url_url",
+        "documentation": {}
+    },
+    {
         "label": "UrlShornerConfig",
         "kind": 6,
         "importPath": "url_shorner.apps",
@@ -1148,11 +1247,20 @@
         "documentation": {}
     },
     {
+        "label": "UrlShortenerForm",
+        "kind": 6,
+        "importPath": "url_shorner.forms",
+        "description": "url_shorner.forms",
+        "peekOfCode": "class UrlShortenerForm(forms.ModelForm):\n    class Meta:\n        model = Url\n        fields = ['url']\n        widgets = {\n            'url': forms.TextInput(attrs={\n                'placeholder': 'Enter URL here',\n                'class': 'form-control'\n            })\n        }",
+        "detail": "url_shorner.forms",
+        "documentation": {}
+    },
+    {
         "label": "Url",
         "kind": 6,
         "importPath": "url_shorner.models",
         "description": "url_shorner.models",
-        "peekOfCode": "class Url(models.Model):\n    url = models.CharField(max_length=200)\n    uid = models.CharField(max_length=5, unique=True,\n                           primary_key=True, default=uuid4, editable=False)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.uid} - {self.url}\"",
+        "peekOfCode": "class Url(models.Model):\n    url = models.URLField()\n    uid = models.CharField(max_length=5, unique=True,\n                           primary_key=True, default=uuid4, editable=False)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.uid} - {self.url}\"",
         "detail": "url_shorner.models",
         "documentation": {}
     },
@@ -1161,7 +1269,7 @@
         "kind": 5,
         "importPath": "url_shorner.urls",
         "description": "url_shorner.urls",
-        "peekOfCode": "app_name = \"url_shorner\"\nurlpatterns = [\n    path('', home, name='index'),\n]",
+        "peekOfCode": "app_name = \"url_shorner\"\nurlpatterns = [\n    path('', home, name='index'),\n    path('delete/<uid>/', delete_url, name='delete_url'),\n]",
         "detail": "url_shorner.urls",
         "documentation": {}
     },
@@ -1170,7 +1278,7 @@
         "kind": 5,
         "importPath": "url_shorner.urls",
         "description": "url_shorner.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', home, name='index'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', home, name='index'),\n    path('delete/<uid>/', delete_url, name='delete_url'),\n]",
         "detail": "url_shorner.urls",
         "documentation": {}
     },
@@ -1179,7 +1287,16 @@
         "kind": 2,
         "importPath": "url_shorner.views",
         "description": "url_shorner.views",
-        "peekOfCode": "def home(request):\n    all_urls = Url.objects.all()\n    if request.method == \"POST\":\n        url = request.POST.get(\"url\")\n        if url:\n            new_url = Url(url=url)\n            new_url.save()\n            all_urls = Url.objects.all()\n    context = {\n        \"urls\": all_urls,",
+        "peekOfCode": "def home(request):\n    all_urls = Url.objects.all()\n    form = UrlShortenerForm()\n    context = {\n        \"urls\": all_urls,\n        \"myform\": form,\n    }\n    if request.method == \"POST\":\n        form = UrlShortenerForm(data=request.POST)\n        if form.is_valid():",
+        "detail": "url_shorner.views",
+        "documentation": {}
+    },
+    {
+        "label": "delete_url",
+        "kind": 2,
+        "importPath": "url_shorner.views",
+        "description": "url_shorner.views",
+        "peekOfCode": "def delete_url(request, uid):\n    url = Url.objects.get(uid=uid)\n    url.delete()\n    return redirect(\"url_shorner:index\")",
         "detail": "url_shorner.views",
         "documentation": {}
     },

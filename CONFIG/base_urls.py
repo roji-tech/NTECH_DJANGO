@@ -6,5 +6,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', include('todo.urls')),
     path('blogs/', include('blog.urls')),
+    path("shortner/", include("url_shorner.urls")),
     path('myadmin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
