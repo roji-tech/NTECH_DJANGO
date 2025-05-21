@@ -20,15 +20,24 @@
       <ul>
         {% for url in urls %}
         <li>
-          <a href="{{ url.short_url }}">{{ url.short_url }}</a> - {{ url.url }}
+            <a href="{% url 'url_shorner:redirect_to_url' url.uid %}" target="_blank">{{request.scheme }}://{{request.get_host}}/shortner/{{ url.uid }}</a>
+          <br />
+          - {{ url.short_url }}
           <form
             action="{% url 'url_shorner:delete_url' url.pk %}"
             method="post"
           >
             {% csrf_token %}
-            <button onclick="alert('Aare you sure you want to delete?')" type="submit">Delete</button>
+            <button
+              onclick="alert('Aare you sure you want to delete?')"
+              type="submit"
+            >
+              Delete
+            </button>
           </form>
         </li>
+        <hr />
+        <hr />
         {% endfor %}
       </ul>
     </main>

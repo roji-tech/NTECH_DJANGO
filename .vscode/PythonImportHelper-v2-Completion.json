@@ -485,6 +485,14 @@
         "documentation": {}
     },
     {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "redirect",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -663,6 +671,14 @@
         "documentation": {}
     },
     {
+        "label": "redirect_to_url",
+        "importPath": "url_shorner.views",
+        "description": "url_shorner.views",
+        "isExtraImport": true,
+        "detail": "url_shorner.views",
+        "documentation": {}
+    },
+    {
         "label": "UrlShortenerForm",
         "importPath": "url_shorner.forms",
         "description": "url_shorner.forms",
@@ -702,7 +718,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-4464=5(m0m@n_^je7mc7w+rmgs8c!x5ais1k!n4%vi^@nkij17'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-4464=5(m0m@n_^je7mc7w+rmgs8c!x5ais1k!n4%vi^@nkij17'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\"localhost\", \"127.0.0.1\",]\n# Application definition\nINSTALLED_APPS = [",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -711,7 +727,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-4464=5(m0m@n_^je7mc7w+rmgs8c!x5ais1k!n4%vi^@nkij17'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-4464=5(m0m@n_^je7mc7w+rmgs8c!x5ais1k!n4%vi^@nkij17'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\"localhost\", \"127.0.0.1\",]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -720,7 +736,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\"localhost\", \"127.0.0.1\",]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -729,7 +745,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    \"todo\",",
+        "peekOfCode": "ALLOWED_HOSTS = [\"localhost\", \"127.0.0.1\",]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    \"todo\",",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -1260,7 +1276,16 @@
         "kind": 6,
         "importPath": "url_shorner.models",
         "description": "url_shorner.models",
-        "peekOfCode": "class Url(models.Model):\n    url = models.URLField()\n    uid = models.CharField(max_length=5, unique=True,\n                           primary_key=True, default=uuid4, editable=False)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.uid} - {self.url}\"",
+        "peekOfCode": "class Url(models.Model):\n    url = models.URLField()\n    uid = models.CharField(max_length=5, unique=True,\n                           primary_key=True, default=generate_unique_id, editable=False)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.uid} - {self.url}\"",
+        "detail": "url_shorner.models",
+        "documentation": {}
+    },
+    {
+        "label": "generate_unique_id",
+        "kind": 2,
+        "importPath": "url_shorner.models",
+        "description": "url_shorner.models",
+        "peekOfCode": "def generate_unique_id():\n    return str(uuid4())[:5]\nclass Url(models.Model):\n    url = models.URLField()\n    uid = models.CharField(max_length=5, unique=True,\n                           primary_key=True, default=generate_unique_id, editable=False)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.uid} - {self.url}\"",
         "detail": "url_shorner.models",
         "documentation": {}
     },
@@ -1269,7 +1294,7 @@
         "kind": 5,
         "importPath": "url_shorner.urls",
         "description": "url_shorner.urls",
-        "peekOfCode": "app_name = \"url_shorner\"\nurlpatterns = [\n    path('', home, name='index'),\n    path('delete/<uid>/', delete_url, name='delete_url'),\n]",
+        "peekOfCode": "app_name = \"url_shorner\"\nurlpatterns = [\n    path('', home, name='index'),\n    path('<str:uid>/', redirect_to_url, name='redirect_to_url'),\n    path('delete/<str:uid>/', delete_url, name='delete_url'),\n]",
         "detail": "url_shorner.urls",
         "documentation": {}
     },
@@ -1278,7 +1303,7 @@
         "kind": 5,
         "importPath": "url_shorner.urls",
         "description": "url_shorner.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', home, name='index'),\n    path('delete/<uid>/', delete_url, name='delete_url'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', home, name='index'),\n    path('<str:uid>/', redirect_to_url, name='redirect_to_url'),\n    path('delete/<str:uid>/', delete_url, name='delete_url'),\n]",
         "detail": "url_shorner.urls",
         "documentation": {}
     },
@@ -1287,7 +1312,7 @@
         "kind": 2,
         "importPath": "url_shorner.views",
         "description": "url_shorner.views",
-        "peekOfCode": "def home(request):\n    all_urls = Url.objects.all()\n    form = UrlShortenerForm()\n    context = {\n        \"urls\": all_urls,\n        \"myform\": form,\n    }\n    if request.method == \"POST\":\n        form = UrlShortenerForm(data=request.POST)\n        if form.is_valid():",
+        "peekOfCode": "def home(request):\n    from django.db.models import Value\n    all_urls = Url.objects.all()\n    # .annotate(\n    #     short_url=Value(f\"{request.build_absolute_uri('/shortner/uid/')}\",\n    # )\n    form = UrlShortenerForm()\n    context = {\n        \"urls\": all_urls,\n        \"myform\": form,",
         "detail": "url_shorner.views",
         "documentation": {}
     },
@@ -1296,7 +1321,16 @@
         "kind": 2,
         "importPath": "url_shorner.views",
         "description": "url_shorner.views",
-        "peekOfCode": "def delete_url(request, uid):\n    url = Url.objects.get(uid=uid)\n    url.delete()\n    return redirect(\"url_shorner:index\")",
+        "peekOfCode": "def delete_url(request, uid):\n    url = Url.objects.get(uid=uid)\n    url.delete()\n    return redirect(\"url_shorner:index\")\ndef redirect_to_url(request, uid):\n    # url = Url.objects.get(uid=uid)\n    url = get_object_or_404(Url, uid=uid)\n    # Redirect to a specific URL\n    return redirect(url.url)",
+        "detail": "url_shorner.views",
+        "documentation": {}
+    },
+    {
+        "label": "redirect_to_url",
+        "kind": 2,
+        "importPath": "url_shorner.views",
+        "description": "url_shorner.views",
+        "peekOfCode": "def redirect_to_url(request, uid):\n    # url = Url.objects.get(uid=uid)\n    url = get_object_or_404(Url, uid=uid)\n    # Redirect to a specific URL\n    return redirect(url.url)",
         "detail": "url_shorner.views",
         "documentation": {}
     },

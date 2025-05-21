@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 
 from url_shorner.forms import UrlShortenerForm
 from url_shorner.models import Url
@@ -7,7 +7,11 @@ from url_shorner.models import Url
 
 
 def home(request):
+    from django.db.models import Value
     all_urls = Url.objects.all()
+    # .annotate(
+    #     short_url=Value(f"{request.build_absolute_uri('/shortner/uid/')}",
+    # )
     form = UrlShortenerForm()
 
     context = {
@@ -28,3 +32,11 @@ def delete_url(request, uid):
     url = Url.objects.get(uid=uid)
     url.delete()
     return redirect("url_shorner:index")
+
+
+def redirect_to_url(request, uid):
+    # url = Url.objects.get(uid=uid)
+    url = get_object_or_404(Url, uid=uid)
+    # Redirect to a specific URL
+
+    return redirect(url.url)
