@@ -41,7 +41,7 @@
         "documentation": {}
     },
     {
-        "label": "admin",
+        "label": "auth",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
@@ -74,6 +74,22 @@
     },
     {
         "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
@@ -90,6 +106,38 @@
     },
     {
         "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -397,11 +445,75 @@
         "documentation": {}
     },
     {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
+        "label": "User",
+        "importPath": "accounts.models",
+        "description": "accounts.models",
         "isExtraImport": true,
-        "detail": "django.test",
+        "detail": "accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "accounts.models",
+        "description": "accounts.models",
+        "isExtraImport": true,
+        "detail": "accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "routers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
         "documentation": {}
     },
     {
@@ -434,6 +546,70 @@
         "description": "django.test",
         "isExtraImport": true,
         "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "make_password",
+        "importPath": "django.contrib.auth.hashers",
+        "description": "django.contrib.auth.hashers",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.hashers",
+        "documentation": {}
+    },
+    {
+        "label": "HttpRequest",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
         "documentation": {}
     },
     {
@@ -509,28 +685,164 @@
         "documentation": {}
     },
     {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "ListView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "CreateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "DetailView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "LoginView",
+        "importPath": "django.contrib.auth.views",
+        "description": "django.contrib.auth.views",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.views",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutView",
+        "importPath": "django.contrib.auth.views",
+        "description": "django.contrib.auth.views",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.views",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "method_decorator",
+        "importPath": "django.utils.decorators",
+        "description": "django.utils.decorators",
+        "isExtraImport": true,
+        "detail": "django.utils.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "api_view",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateSerializer",
+        "importPath": "accounts.serializers",
+        "description": "accounts.serializers",
+        "isExtraImport": true,
+        "detail": "accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserSerializer",
+        "importPath": "accounts.serializers",
+        "description": "accounts.serializers",
+        "isExtraImport": true,
+        "detail": "accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ModelViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
         "label": "django.db.models.deletion",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "django.db.models.deletion",
         "description": "django.db.models.deletion",
         "detail": "django.db.models.deletion",
-        "documentation": {}
-    },
-    {
-        "label": "forms",
-        "importPath": "django",
-        "description": "django",
-        "isExtraImport": true,
-        "detail": "django",
-        "documentation": {}
-    },
-    {
-        "label": "forms",
-        "importPath": "django",
-        "description": "django",
-        "isExtraImport": true,
-        "detail": "django",
         "documentation": {}
     },
     {
@@ -590,14 +902,6 @@
         "documentation": {}
     },
     {
-        "label": "get_user_model",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
         "label": "home",
         "importPath": "todo.views",
         "description": "todo.views",
@@ -611,14 +915,6 @@
         "description": "todo.views",
         "isExtraImport": true,
         "detail": "todo.views",
-        "documentation": {}
-    },
-    {
-        "label": "View",
-        "importPath": "django.views",
-        "description": "django.views",
-        "isExtraImport": true,
-        "detail": "django.views",
         "documentation": {}
     },
     {
@@ -709,7 +1005,7 @@
         "kind": 5,
         "importPath": "CONFIG.base_urls",
         "description": "CONFIG.base_urls",
-        "peekOfCode": "urlpatterns = [\n    path('', include('todo.urls')),\n    path('blogs/', include('blog.urls')),\n    path(\"shortner/\", include(\"url_shorner.urls\")),\n    path('myadmin/', admin.site.urls),\n] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('', include('todo.urls')),\n    path('blogs/', include('blog.urls')),\n    path(\"shortner/\", include(\"url_shorner.urls\")),\n    path('myadmin/', admin.site.urls),\n    path('auth/', include(\"django.contrib.auth.urls\")),\n    path('auth/', include(\"accounts.urls\")),\n    path('api-auth/', include('rest_framework.urls'))\n    # path('auth/login/', CustomLoginView.as_view(),)\n] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
         "detail": "CONFIG.base_urls",
         "documentation": {}
     },
@@ -718,7 +1014,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-4464=5(m0m@n_^je7mc7w+rmgs8c!x5ais1k!n4%vi^@nkij17'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\"localhost\", \"127.0.0.1\",]\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-4464=5(m0m@n_^je7mc7w+rmgs8c!x5ais1k!n4%vi^@nkij17'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"localhost\", \"127.0.0.1\",]\n# Application definition\nINSTALLED_APPS = [",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -727,7 +1023,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-4464=5(m0m@n_^je7mc7w+rmgs8c!x5ais1k!n4%vi^@nkij17'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\"localhost\", \"127.0.0.1\",]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-4464=5(m0m@n_^je7mc7w+rmgs8c!x5ais1k!n4%vi^@nkij17'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"localhost\", \"127.0.0.1\",]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -736,7 +1032,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\"localhost\", \"127.0.0.1\",]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"localhost\", \"127.0.0.1\",]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -745,7 +1041,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\"localhost\", \"127.0.0.1\",]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    \"todo\",",
+        "peekOfCode": "ALLOWED_HOSTS = [\"localhost\", \"127.0.0.1\",]\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -754,7 +1050,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    \"todo\",\n    \"blog\",\n    # \"school\",",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    \"todo\",\n    \"blog\",",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -862,7 +1158,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = \"accounts.User\"\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'staticfiles'),\n]",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = \"accounts.User\"\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'staticfiles'),\n]\nLOGIN_REDIRECT_URL = \"/blogs\"\nLOGIN_URL = \"/auth/login/\"\nREST_FRAMEWORK = {",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -871,7 +1167,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "AUTH_USER_MODEL = \"accounts.User\"\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'staticfiles'),\n]",
+        "peekOfCode": "AUTH_USER_MODEL = \"accounts.User\"\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'staticfiles'),\n]\nLOGIN_REDIRECT_URL = \"/blogs\"\nLOGIN_URL = \"/auth/login/\"\nREST_FRAMEWORK = {\n    # Use Django's standard `django.contrib.auth` permissions,",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -880,7 +1176,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'staticfiles'),\n]",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'staticfiles'),\n]\nLOGIN_REDIRECT_URL = \"/blogs\"\nLOGIN_URL = \"/auth/login/\"\nREST_FRAMEWORK = {\n    # Use Django's standard `django.contrib.auth` permissions,\n    # or allow read-only access for unauthenticated users.",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -889,7 +1185,7 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'staticfiles'),\n]",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'staticfiles'),\n]\nLOGIN_REDIRECT_URL = \"/blogs\"\nLOGIN_URL = \"/auth/login/\"\nREST_FRAMEWORK = {\n    # Use Django's standard `django.contrib.auth` permissions,\n    # or allow read-only access for unauthenticated users.\n    # 'DEFAULT_PERMISSION_CLASSES': [",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -898,7 +1194,34 @@
         "kind": 5,
         "importPath": "CONFIG.settings",
         "description": "CONFIG.settings",
-        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'staticfiles'),\n]",
+        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'staticfiles'),\n]\nLOGIN_REDIRECT_URL = \"/blogs\"\nLOGIN_URL = \"/auth/login/\"\nREST_FRAMEWORK = {\n    # Use Django's standard `django.contrib.auth` permissions,\n    # or allow read-only access for unauthenticated users.\n    # 'DEFAULT_PERMISSION_CLASSES': [\n    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'",
+        "detail": "CONFIG.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "CONFIG.settings",
+        "description": "CONFIG.settings",
+        "peekOfCode": "LOGIN_REDIRECT_URL = \"/blogs\"\nLOGIN_URL = \"/auth/login/\"\nREST_FRAMEWORK = {\n    # Use Django's standard `django.contrib.auth` permissions,\n    # or allow read-only access for unauthenticated users.\n    # 'DEFAULT_PERMISSION_CLASSES': [\n    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'\n    # ]\n}",
+        "detail": "CONFIG.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_URL",
+        "kind": 5,
+        "importPath": "CONFIG.settings",
+        "description": "CONFIG.settings",
+        "peekOfCode": "LOGIN_URL = \"/auth/login/\"\nREST_FRAMEWORK = {\n    # Use Django's standard `django.contrib.auth` permissions,\n    # or allow read-only access for unauthenticated users.\n    # 'DEFAULT_PERMISSION_CLASSES': [\n    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'\n    # ]\n}",
+        "detail": "CONFIG.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "CONFIG.settings",
+        "description": "CONFIG.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    # Use Django's standard `django.contrib.auth` permissions,\n    # or allow read-only access for unauthenticated users.\n    # 'DEFAULT_PERMISSION_CLASSES': [\n    #     'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'\n    # ]\n}",
         "detail": "CONFIG.settings",
         "documentation": {}
     },
@@ -930,12 +1253,138 @@
         "documentation": {}
     },
     {
+        "label": "UserRegistrationForm",
+        "kind": 6,
+        "importPath": "accounts.forms",
+        "description": "accounts.forms",
+        "peekOfCode": "class UserRegistrationForm(forms.ModelForm):\n    class Meta:\n        model = User\n        fields = [\"username\", \"first_name\", \"last_name\", \"email\", \"password\"]\n        widgets = {\n            'password': forms.PasswordInput(),\n        }\n    def clean_email(self):",
+        "detail": "accounts.forms",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "kind": 6,
         "importPath": "accounts.models",
         "description": "accounts.models",
         "peekOfCode": "class User(AbstractUser):\n    ...\n    def __str__(self) -> str:\n        return f\"{self.username} -- {self.email}\"\n    # role = models.CharField(max_length=10, choices=ROLE_CHOICES, default=\"S\")",
         "detail": "accounts.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserSerializer",
+        "kind": 6,
+        "importPath": "accounts.serializers",
+        "description": "accounts.serializers",
+        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = ['username', 'email', \"is_active\", \"is_staff\", \"is_superuser\", \"first_name\", \"last_name\", \"date_joined\", \"password\"]\nclass UserCreateSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = ['username', 'email', \"first_name\", \"last_name\", \"password\"]\n# # ViewSets define the view behavior.\n# class UserViewSet(viewsets.ModelViewSet):",
+        "detail": "accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateSerializer",
+        "kind": 6,
+        "importPath": "accounts.serializers",
+        "description": "accounts.serializers",
+        "peekOfCode": "class UserCreateSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = ['username', 'email', \"first_name\", \"last_name\", \"password\"]\n# # ViewSets define the view behavior.\n# class UserViewSet(viewsets.ModelViewSet):\n#     queryset = User.objects.all()\n#     serializer_class = UserSerializer\n# # Routers provide an easy way of automatically determining the URL conf.\n# router = routers.DefaultRouter()",
+        "detail": "accounts.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "accounts.urls",
+        "description": "accounts.urls",
+        "peekOfCode": "app_name = \"url_shorner\"\nrouter = DefaultRouter()\nrouter.register(r'users', UserModelViewSet)\nurlpatterns = [\n    path('register/', RegistrationView.as_view(), name='register'),\n    path('__users/', UsersList.as_view(), name='users'),\n    path('myusers/', users, name='myusers'),\n    path('api/', get_users, name='myusers'),\n    path('api/users/', UserAPIView.as_view(), name='myusers2'),\n    path('', include(router.urls)),",
+        "detail": "accounts.urls",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "accounts.urls",
+        "description": "accounts.urls",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register(r'users', UserModelViewSet)\nurlpatterns = [\n    path('register/', RegistrationView.as_view(), name='register'),\n    path('__users/', UsersList.as_view(), name='users'),\n    path('myusers/', users, name='myusers'),\n    path('api/', get_users, name='myusers'),\n    path('api/users/', UserAPIView.as_view(), name='myusers2'),\n    path('', include(router.urls)),\n] ",
+        "detail": "accounts.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "accounts.urls",
+        "description": "accounts.urls",
+        "peekOfCode": "urlpatterns = [\n    path('register/', RegistrationView.as_view(), name='register'),\n    path('__users/', UsersList.as_view(), name='users'),\n    path('myusers/', users, name='myusers'),\n    path('api/', get_users, name='myusers'),\n    path('api/users/', UserAPIView.as_view(), name='myusers2'),\n    path('', include(router.urls)),\n] \n# + router.urls\n# {",
+        "detail": "accounts.urls",
+        "documentation": {}
+    },
+    {
+        "label": "RegistrationView",
+        "kind": 6,
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "peekOfCode": "class RegistrationView(CreateView):\n    # fields = [\"username\", \"first_name\", \"last_name\", \"email\", \"password\"]\n    form_class = UserCreationForm\n    success_url = \"/\"\n    template_name = \"accounts/register.html\"\n    queryset = User.objects .all()\n    # http_method_names\n    def get(self, request: HttpRequest, *args: str, **kwargs: Any) -> HttpResponse:\n        print(\"GET request received\")\n        # return render(request, \"accounts/register.html\", {\"form\": self.get_form()})",
+        "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "UsersList",
+        "kind": 6,
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "peekOfCode": "class UsersList(ListView):\n    queryset = User.objects.all()\n    template_name = \"accounts/users.html\"\n    # context_object_name = \"users\"\ndef user_detail(request, pk):\n    if request.method == \"POST\":\n        print(\"POST request received for user detail\")\n        # Handle POST request if needed\n        pass\n    if request.method == \"GET\":",
+        "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "UserAPIView",
+        "kind": 6,
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "peekOfCode": "class UserAPIView(APIView):\n    def get(self, request: HttpRequest):\n        users = User.objects.all()\n        serializer = UserSerializer(users, many=True)\n        return Response(serializer.data)\n    def post(self, request: HttpRequest, *args: str, **kwargs: Any) -> HttpResponse:\n        serializer = UserCreateSerializer(data=request.data)\n        if serializer.is_valid():\n            serializer.save()\n            return Response(serializer.data, status=201)",
+        "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "UserModelViewSet",
+        "kind": 6,
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "peekOfCode": "class UserModelViewSet(ModelViewSet):\n    queryset = User.objects.all()\n    http_method_names = [\"get\", \"post\", \"delete\", \"put\"]\n    serializer_class = UserSerializer\n    def perform_create(self, serializer):\n        password = self.request.data[\"password\"]\n        serializer.validated_data[\"password\"] = make_password(password)\n        return super().perform_create(serializer)\n    # def get_serializer_class(self):\n    #     if self.request.method == \"POST\":",
+        "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "user_detail",
+        "kind": 2,
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "peekOfCode": "def user_detail(request, pk):\n    if request.method == \"POST\":\n        print(\"POST request received for user detail\")\n        # Handle POST request if needed\n        pass\n    if request.method == \"GET\":\n        print(\"GET request received for user detail\")\n        # Handle GET request if needed\n        pass\n    user = User.objects.get(pk=pk)",
+        "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "users",
+        "kind": 2,
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "peekOfCode": "def users(req):\n    data = []\n    if req.method == \"POST\":\n        print(\"POST request received for users\")\n        # Handle POST request if needed\n        pass\n    if req.method == \"GET\":\n        users = User.objects.all()\n        serializer = UserSerializer(users, many=True)\n        data = serializer.data",
+        "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_users",
+        "kind": 2,
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "peekOfCode": "def get_users(req):\n    if req.method == \"GET\":\n        users = User.objects.order_by(\"-date_joined\")\n        serializer = UserSerializer(users, many=True)\n        data = serializer.data\n        return Response(data, status=200)\n    else:\n        return HttpResponse(\"Method not allowed\", status=405)\nclass UserAPIView(APIView):\n    def get(self, request: HttpRequest):",
+        "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 5,
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "peekOfCode": "User = get_user_model()\nclass RegistrationView(CreateView):\n    # fields = [\"username\", \"first_name\", \"last_name\", \"email\", \"password\"]\n    form_class = UserCreationForm\n    success_url = \"/\"\n    template_name = \"accounts/register.html\"\n    queryset = User.objects .all()\n    # http_method_names\n    def get(self, request: HttpRequest, *args: str, **kwargs: Any) -> HttpResponse:\n        print(\"GET request received\")",
+        "detail": "accounts.views",
         "documentation": {}
     },
     {
@@ -1312,7 +1761,7 @@
         "kind": 2,
         "importPath": "url_shorner.views",
         "description": "url_shorner.views",
-        "peekOfCode": "def home(request):\n    from django.db.models import Value\n    all_urls = Url.objects.all()\n    # .annotate(\n    #     short_url=Value(f\"{request.build_absolute_uri('/shortner/uid/')}\",\n    # )\n    form = UrlShortenerForm()\n    context = {\n        \"urls\": all_urls,\n        \"myform\": form,",
+        "peekOfCode": "def home(request):\n    from django.db.models import Value\n    all_urls = Url.objects.all()\n    # .annotate(\n    #     short_url=Value(f\"{request.build_absolute_uri('/shortner/uid/')}\",\n    # )\n    messages.success(request, 'This is a success message.')\n    messages.error(request, 'An error occurred.')\n    messages.warning(request, 'This is a warning.')\n    messages.info(request, 'Just an informational message.')",
         "detail": "url_shorner.views",
         "documentation": {}
     },

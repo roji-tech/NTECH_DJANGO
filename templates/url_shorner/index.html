@@ -17,10 +17,24 @@
       </form>
 
       <h2>All Urls</h2>
+
+      {{ messages }} {% if messages %}
+      <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
       <ul>
         {% for url in urls %}
         <li>
-            <a href="{% url 'url_shorner:redirect_to_url' url.uid %}" target="_blank">{{request.scheme }}://{{request.get_host}}/shortner/{{ url.uid }}</a>
+          <a
+            href="{% url 'url_shorner:redirect_to_url' url.uid %}"
+            target="_blank"
+          >
+            {{request.scheme }}://{{request.get_host}}/shortner/{{ url.uid }}
+          </a>
           <br />
           - {{ url.short_url }}
           <form
